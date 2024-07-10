@@ -6,7 +6,8 @@ class OpenAI:
         pass
 
     @staticmethod
-    def get_answer(question):
+    def get_answer(question, history):
         llm = ChatOpenAI(api_key=config.OPENAI_API_KEY)
-        response = llm.invoke(question)
+        prompt = f'Levando em consideração esse histórico de conversa anterior: {history}, responda a seguinte pergunta: {question}'
+        response = llm.invoke(prompt)
         return response.content

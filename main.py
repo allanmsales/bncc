@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 from server.gunicorn_server import GunicornServer
 from controller import agent
 
@@ -7,6 +8,8 @@ app = FastAPI(
     version="0.1",
     description="Agent to answer questions about BNCC."
 )
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 app.include_router(agent.router)
 
