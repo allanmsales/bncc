@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>BNCC Agent</title>
+    </head>
+    <body>
+        <h2>
+            BNCC
+        </h2>
+        <form method="POST" action="/agent/send_question">
+            <fieldset>
+              <legend>Faça sua pergunta:</legend>
+              <div>
+                  <input type="text" name="question" value="">
+              </div>
+            </fieldset>
+            <input type="submit" value="Send">
+        </form>
+        <div>
+            <h2>User:</h2>
+                {% for question in content.user %}
+                    {{ question }}
+                {% endfor %}
+        </div>
+        <div>
+            <h2>Agent:</h2>
+                {% for question in content.agent %}
+                    {{ question }}
+                {% endfor %}
+        </div>
+    </body>
+</html>
