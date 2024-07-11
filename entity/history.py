@@ -13,3 +13,7 @@ class History:
     def add_to_history_user(self, question) -> None:
         """Add an user's answer to chat history"""
         self.history['user'].append(question)
+
+    def history_zip(self) -> list:
+        user_agent_messages = zip(self.history['user'], self.history['agent'])
+        return user_agent_messages
