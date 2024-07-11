@@ -13,7 +13,7 @@ Python 3.10
 * Include the source file using the name bncc.pdf in the root of the project
 * Include a .env file in project root with the following info:
 
-OPENAI_API_KEY=[your_openai_api_key
+OPENAI_API_KEY=[your_openai_api_key]
 
 Access this url to use the chat:
 http://localhost:8080/agent/
