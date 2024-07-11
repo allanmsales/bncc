@@ -16,7 +16,7 @@ history = History()
 
 @router.get("/", response_class=HTMLResponse)
 def front_index(request: Request):
-    return templates.TemplateResponse("home.html", {"request": request, "content": None})
+    return templates.TemplateResponse("home.html", {"request": request, "content": []})
 
 
 @router.post("/send_question")
