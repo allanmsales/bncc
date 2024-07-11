@@ -15,8 +15,12 @@ Python 3.10
 
 OPENAI_API_KEY=[your_openai_api_key
 
-Acess:
+Access this url to use the chat:
 http://localhost:8080/agent/
+
+
+Access this url to see the summary of utilization:
+http://localhost:8080/agent/observability
 
 
 # How it works
